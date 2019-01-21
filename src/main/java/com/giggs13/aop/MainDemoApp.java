@@ -12,7 +12,7 @@ public class MainDemoApp {
                 = new AnnotationConfigApplicationContext(DemoConfig.class);
 
         AccountDAOImpl accountDAO = context.getBean(AccountDAOImpl.class);
-        accountDAO.addAccount(new Account(), true);
+        accountDAO.addAccount(new Account("Madhu", "platinum"), true);
         accountDAO.doWork();
         accountDAO.setName("foobar");
         accountDAO.getName();
